@@ -1,5 +1,5 @@
-/**
- * // Union type(OR - |)
+
+// Union type(OR - |)
 type User = number | string;
 
 function numberOrstring(a: User): void {
@@ -21,7 +21,7 @@ function setStatus(value: Status): void {
 }
 setStatus("loading");
 setStatus(true);
-setStatus(50); // Error!
+// setStatus(50); // Error!
 
 // Intersection type (AND - &)
 interface shape {
@@ -39,4 +39,3 @@ let Details: colourful = {
   radius: 5,
 };
 
- */
