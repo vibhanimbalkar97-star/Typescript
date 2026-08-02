@@ -317,4 +317,7 @@ type status = "loading" | "success" | "error"
 let statuss:status = "loading"
 statuss = "success"
 
-
+// Type alias vs Interface
+// Interfaces can be extended, type aliases cannot
+// Interfaces can be declared multiple times and will merge
+// Use interfaces for object shapes, type aliases for unions/intersections
