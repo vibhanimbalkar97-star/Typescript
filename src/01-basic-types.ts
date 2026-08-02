@@ -7,7 +7,7 @@ let c: boolean = true;
 let arr: number[] = [1, 2, 3, 4, 5];
 let ar: string[] = ["a", "b", "c", "d"];
 
-// Tuples (have a fixed size of data)
+// Tuples (have a fixed size of data)A tuple is an array with a fixed number of elements, where each position has a specific type.
 let d: [number, string] = [12, "a"];
 
 // Any (avoid to use)
