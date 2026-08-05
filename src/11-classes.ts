@@ -155,3 +155,69 @@ let d9 = new Product2("iron", 400)
 console.log(d9.name)
 d9.name="glass"
 console.log(d9.name)
+
+// ========================================================================================================================================================================
+
+
+// Example with shorter way
+class Employee {
+  constructor(private id:number, public _name:string, protected department:string){}
+
+  get employeeName(){
+    return this._name
+  }
+
+  set setName(value:string){
+  this._name=value
+  }
+}
+
+// inheritance
+class Manger extends Employee {
+  constructor(id:number, _name:string, department:string, private teamsize:number){
+    super(id, _name, department)
+  }
+ getName() {
+  console.log(`${this._name} name, ${this.department} department, ${this.teamsize} team`)
+ }
+
+}
+
+let res = new Employee(18, "karan", "Cleaning")
+// res.id=12 // private not access
+// res.department = "abc" //protected not accessible
+res.setName = "kareena"
+console.log(res.employeeName)
+let res1 = new Manger(18, "karan", "Cleaning", 48)
+res1.getName()
+
+// static class = does not create object, access through class, when have same property then use
+class Dogg {
+  static voice = "Woof"
+}
+console.log(Dogg.voice)
+
+// abstract class = it is an incomplete class , not create object, it has method name and in child has process.
+abstract class Shape {
+  constructor(public color:string){}
+
+  abstract getArea(): number
+
+  displayColor() {
+    console.log(`${this.color}`)
+  }
+}
+
+class Rectangle extends Shape{
+constructor(color:string, private width:number, private height:number){
+  super(color)
+}
+
+getArea(): number {
+  return this.height * this.width
+}
+}
+
+let d10 = new Rectangle("pink", 20, 45)
+d10.displayColor()
+console.log(d10.getArea())
