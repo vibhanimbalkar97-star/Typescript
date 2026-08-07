@@ -29,3 +29,4 @@ function handleStatus(status:HttpStatus):void{
         console.log("Success")
     }
 }
+handleStatus(HttpStatus.Ok)
